@@ -55,8 +55,8 @@
         <div class="w3-modal-content w3-animate-top">
 
             <header class="w3-container w3-teal">
-            <span onclick="document.getElementById('id01').style.display='none'"
-            class="w3-button w3-display-topright">&times;</span>
+            <span  onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-hover-red w3-display-topright">&times;</span>
                 <h2>Modificar pokemon</h2>
             </header>
 
