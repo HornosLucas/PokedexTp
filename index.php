@@ -44,8 +44,9 @@
         <td> <p class="info"> Scyther </p> </td>
         <td>
             <button class="w3-button w3-black  w3-hover-red w3-round-large">eliminar</button>
-            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black  w3-round-large">modificar</button>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-hover-blue  w3-round-large">modificar</button>
         </td>
+
     </tr>
 
 </table>
