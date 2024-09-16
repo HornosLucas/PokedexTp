@@ -1,0 +1,28 @@
+.form{
+    margin: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input{
+
+    padding: 8px 16px;
+    border: 1px solid grey;
+}
+
+.form .username{
+    border-radius: 8px 0px 0px 8px;
+}
+
+.form button{
+    border-radius: 0px 8px 8px 0px;
+    padding: 8px 16px;
+    border: 1px solid grey;
+
+}
+
+.logo{
+   width: 5em;
+}

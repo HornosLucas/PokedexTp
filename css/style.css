@@ -3,6 +3,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 body{
+
     background-color: #DC0A2D;
 }
 
@@ -11,4 +12,6 @@ main{
     margin-bottom: 10em;
     margin-top: 10em;
 }
+
+
 
