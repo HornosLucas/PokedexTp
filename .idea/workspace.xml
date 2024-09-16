@@ -5,6 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0970c26b-652d-4f47-ae42-6b62169bba49" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokedexTp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Blastoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Bulbasaur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Caterpie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Charizard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Charmander.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Charmeleon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Ivysaur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Squirtle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Venusaur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pokemon/Wartortle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/acero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/agua.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/bicho.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/dragon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/electrico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/fantasma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/fuego.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/hada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/hielo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/lucha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/planta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/psiquico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/roca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/siniestro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/tierra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/veneno.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tipos/volador.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bd.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,32 +54,42 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2m9k5X6umEwYe7J10CSYCgxNI7n" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lucas",
-    "last_opened_file_path": "D:/Xampp/htdocs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/PokedexTp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PokedexTp\PokedexTp\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PS-242.20224.361" />
-        <option value="bundled-php-predefined-a98d8de5180a-d6acee4cb394-com.jetbrains.php.sharedIndexes-PS-242.20224.361" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
       </set>
     </attachedChunks>
   </component>
@@ -56,6 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1726496011381</updated>
       <workItem from="1726496020810" duration="2301000" />
+      <workItem from="1726504537075" duration="3409000" />
+      <workItem from="1726508181983" duration="453000" />
     </task>
     <servers />
   </component>
