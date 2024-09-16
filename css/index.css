@@ -7,3 +7,43 @@
     max-width: 10em;
     min-width: 10em;
 }
+
+
+
+.searchForm{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 3em;
+    width: 100%;
+}
+
+.searchForm input{
+    border-radius: 8px 0px 0px 8px;
+    padding: 8px 16px;
+    float: left;
+    width: 50%;
+    display: block;
+    outline: 0;
+    border: 1px solid grey;
+}
+
+.searchForm button{
+    border-radius: 0px 8px 8px 0px;
+    padding: 8px 16px;
+    float: left;
+    width: 30%;
+    border: 1px solid grey;
+    display: block;
+    outline: 0;
+
+}
+
+.pokemonList td{
+    align-content: center;
+}
+
+.pokemonList .info{
+    margin: auto;
+}
+
