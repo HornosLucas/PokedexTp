@@ -42,7 +42,7 @@
         </td>
         <td> <p class="info"> #123 </p> </td>
         <td> <p class="info"> Scyther </p> </td>
-        <td> <button class="w3-button w3-black  w3-hover-red w3-round-large">eliminar</button> <button class="w3-button w3-black  w3-round-large">modificar</button></td>
+        <td> <button class="w3-button w3-black  w3-hover-red w3-round-large">eliminar</button> <button class="w3-button w3-black w3-hover-blue  w3-round-large">modificar</button></td>
     </tr>
 
 </table>
