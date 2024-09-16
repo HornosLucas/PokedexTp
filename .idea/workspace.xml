@@ -5,42 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0970c26b-652d-4f47-ae42-6b62169bba49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PokedexTp/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Blastoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Bulbasaur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Caterpie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Charizard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Charmander.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Charmeleon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Ivysaur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Squirtle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Venusaur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pokemon/Wartortle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/acero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/agua.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/bicho.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/dragon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/electrico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/fantasma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/fuego.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/hada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/hielo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/lucha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/planta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/psiquico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/roca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/siniestro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/tierra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/veneno.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tipos/volador.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bd.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
