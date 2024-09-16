@@ -76,7 +76,7 @@
                         <textarea class="w3-input w3-border" style="resize:none"></textarea>
                     </p>
 
-                    <p><button type="button" class="w3-btn w3-padding w3-teal w3-right w3-margin-bottom" style="width:120px">Modificar</button></p>
+                    <p><button type="button" class="w3-button w3-black w3-hover-blue  w3-round-large w3-right w3-margin-bottom" style="width:120px">Modificar</button></p>
                 </form>
 
             </div>
