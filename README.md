@@ -26,4 +26,4 @@ INSERT INTO `pokemon` (`id`, `id_pokemon`, `imagen`, `nombre`, `tipo`, `tipo_2`,
 (7, 7, '/PokedexTp/img/pokemon/Squirtle.png', 'Squirtle', 'Agua', '', 'Cuando se siente en peligro, esconde su cuerpo en su caparazón y dispara agua por la boca con mucha fuerza.'),
 (8, 8, '/PokedexTp/img/pokemon/Wartortle.png', 'Wartortle', 'Agua', '', 'Los indicios del caparazón de Squirtle empiezan a endurecerse y forman unas protuberancias en forma de espiral en la espalda.'),
 (9, 9, '/PokedexTp/img/pokemon/Blastoise.png', 'Blastoise', 'Agua', '', 'Se dice que su cañón de agua tiene una precisión de alcance de hasta 50 metros. Cualquier cosa que golpee se desintegrará en pedazos.'),
-(10, 10, '/PokedexTp/img/pokemon/Caterpie.png', 'Caterpie', 'Psiquico', 'Electrico', 'La antena de este Pokémon libera un olor peculiar y fuerte cuando se toca. Pero si la antena se corta, crece otra en su lugar.');
+(10, 10, '/PokedexTp/img/pokemon/Caterpie.png', 'Caterpie', 'Bicho', '', 'La antena de este Pokémon libera un olor peculiar y fuerte cuando se toca. Pero si la antena se corta, crece otra en su lugar.');
