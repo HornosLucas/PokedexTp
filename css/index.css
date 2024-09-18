@@ -46,3 +46,11 @@
     margin: auto;
 }
 
+.newPokemon{
+    width: 90%;
+    margin: auto;
+}
+
+.newPokemon button{
+    width: 100%;
+}

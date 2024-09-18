@@ -54,6 +54,7 @@
                     echo "<td>" . $fila['id_pokemon'] . "</td>";
                     echo "<td>" . $fila['nombre'] . "</td>";
                     echo "<td>
+
                    <button class='w3-button w3-black w3-hover-red w3-round-large'>Eliminar</button>
                    <button onclick=\"document.getElementById('id01').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>
                  </td>";
@@ -97,6 +98,10 @@
             </div>
         </div>
     </div>
+
+        <div class="newPokemon">
+            <button onclick=\"document.getElementById('id01').style.display='block'\" class="w3-button w3-black w3-hover-blue  w3-round-large w3-right w3-margin-bottom"> Capturar Nuevo Pokemon</button>
+        </div>
 </main>
 
 <footer>
