@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<div class="w3-bar w3-light-grey w3-row">
-    <div class="w3-col  w3-green w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="logo">  </div>
-    <div class="w3-col  w3-green w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
-    <div class="w3-col  w3-green w3-center formConteiner conteiner">
+<div class="w3-bar header w3-row">
+    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="logo">  </div>
+    <div class="w3-col   w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
+    <div class="w3-col   w3-center formConteiner conteiner">
         <form class="form">
             <input type="text" class="username" placeholder="username">
             <input type="text" class="password" placeholder="password">

@@ -8,8 +8,11 @@
 
 .form input{
 
-    padding: 8px 16px;
-    border: 1px solid grey;
+
+}
+
+.form .password{
+    border-radius: 0px 0px 0px 0px;
 }
 
 .form .username{
@@ -25,4 +28,8 @@
 
 .logo{
    width: 5em;
+}
+
+.header{
+    background-color: #4FB36B;
 }
