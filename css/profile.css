@@ -1,0 +1,26 @@
+
+.imagenPokemon {
+    height: 40em;
+}
+.descripcionPokemon {
+
+    height: 40em;
+}
+
+img{
+    max-width: 10em;
+    min-width: 10em;
+}
+
+.tipo {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 5em;
+    min-width: 5em;
+}
+
+.nombreTipo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1em; 
+}
