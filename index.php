@@ -15,7 +15,6 @@
         <?php
         include_once("./src/header.php");
         include_once("src/db.php");
-
         $query_pokemon = "SELECT * FROM pokemon";
         $resultado = $conn->query($query_pokemon);
         $path_tipos = '/PokedexTp/img/tipos/';
