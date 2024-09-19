@@ -137,16 +137,17 @@
 
     <script>
         function confirmDelete(id_pokemon) {
-            // Mostrar el modal correspondiente
+
             document.getElementById('modal-' + id_pokemon).style.display = 'block';
 
-            // Asignar la acción al botón de confirmación
+
             document.getElementById('btnConfirmDelete-' + id_pokemon).onclick = function() {
-                window.location.href = 'eliminar_pokemon.php?id_pokemon=' + id_pokemon;
+                window.location.href = 'src/eliminar_pokemon.php?id_pokemon=' + id_pokemon;
             };
         }
     </script>
 </body>
 </html>
 
-<?php
+
+
