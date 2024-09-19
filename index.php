@@ -41,74 +41,111 @@
             </tr>
 
             <?php
-            if($resultado->num_rows > 0){
-                while($fila = $resultado->fetch_assoc()){
+            if ($resultado->num_rows > 0) {
+                while ($fila = $resultado->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td><img src='" . $fila['imagen'] . "' class='w3-circle' alt='Imagen de Pokemon'></td>";
-                    echo "<td><img src='" . $path_tipos . $fila['tipo'] . ".png" ."' class='w3-circle' alt='Tipo de Pokemon'>";
-                    if(!empty($fila["tipo_2"])){
-                        echo "<img src='" . $path_tipos . $fila['tipo_2'] . ".png"  ."' class='w3-circle' alt='Tipo Secundario de Pokemon'></td>";
+                    echo "<td><img src='" . $fila['imagen'] . "'  alt='Imagen de Pokemon'></td>";
+                    echo "<td><img src='" . $path_tipos . $fila['tipo'] . ".png" . "' class='w3-circle' alt='Tipo de Pokemon'>";
+                    if (!empty($fila["tipo_2"])) {
+                        echo "<img src='" . $path_tipos . $fila['tipo_2'] . ".png" . "' class='w3-circle' alt='Tipo Secundario de Pokemon'></td>";
                     } else {
                         echo "</td>";
                     }
                     echo "<td>" . $fila['id_pokemon'] . "</td>";
                     echo "<td>" . $fila['nombre'] . "</td>";
-                    echo "<td>
 
-                   <button class='w3-button w3-black w3-hover-red w3-round-large'>Eliminar</button>
-                   <button onclick=\"document.getElementById('id01').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>
-                 </td>";
+                    echo "<td>";
+
+                    echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
+                   
+                 
+                   echo "<button type='button' onclick=\"document.getElementById('id01').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
+                  
+                    echo "</td>";
                     echo "</tr>";
+
+
+                    echo "<div id='modal-" . $fila['id_pokemon'] . "' class='w3-modal'>
+                    <div class='w3-modal-content w3-animate-top'>
+                        <header class='w3-container w3-teal'>
+                            <span onclick=\"document.getElementById('modal-" . $fila['id_pokemon'] . "').style.display='none'\"
+                                   class='w3-button w3-hover-red w3-display-topright'>&times;</span>
+                            <h2>Eliminar Pokémon</h2>
+                        </header>
+                        <div class='w3-container'>
+                            <p>¿Estás seguro de que deseas eliminar a " . $fila['nombre'] . "?</p>
+                        </div>
+                        <footer class='w3-container w3-red'>
+                            <button id='btnConfirmDelete-" . $fila['id_pokemon'] . "' class='w3-button w3-green w3-right'>Sí</button>
+                            <button onclick=\"document.getElementById('modal-" . $fila['id_pokemon'] . "').style.display='none'\" class='w3-button w3-red w3-right'>No</button>
+                        </footer>
+                    </div>
+                </div>";
                 }
             } else {
                 echo "<tr><td colspan='5'>No se encontraron Pokémon</td></tr>";
             }
             ?>
 
-</table>
+        </table>
 
-    <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-animate-top">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top">
 
-            <header class="w3-container w3-teal">
-            <span  onclick="document.getElementById('id01').style.display='none'"
-                   class="w3-button w3-hover-red w3-display-topright">&times;</span>
-                <h2>Modificar pokemon</h2>
-            </header>
+                <header class="w3-container w3-teal">
+            <span onclick="document.getElementById('id01').style.display='none'"
+                  class="w3-button w3-hover-red w3-display-topright">&times;</span>
+                    <h2>Modificar pokemon</h2>
+                </header>
 
-            <div class="">
-                <form class="w3-container w3-card-4" action=""> <!--- MODIFICAR ACTION Y PONER PHP --->
-                    <br>
-                    <p>
-                        <label class="w3-text-grey">Nombre</label>
-                        <input class="w3-input w3-border" type="text" required="">
-                    </p>
-                    <p>
-                        <label class="w3-text-grey">Numero</label>
-                        <input class="w3-input w3-border" type="text" required="">
-                    </p>
-                    <p>
-                        <label class="w3-text-grey">Descripcion</label>
-                        <textarea class="w3-input w3-border" style="resize:none"></textarea>
-                    </p>
+                <div class="">
+                    <form class="w3-container w3-card-4" action=""> <!--- MODIFICAR ACTION Y PONER PHP --->
+                        <br>
+                        <p>
+                            <label class="w3-text-grey">Nombre</label>
+                            <input class="w3-input w3-border" type="text" required="">
+                        </p>
+                        <p>
+                            <label class="w3-text-grey">Numero</label>
+                            <input class="w3-input w3-border" type="text" required="">
+                        </p>
+                        <p>
+                            <label class="w3-text-grey">Descripcion</label>
+                            <textarea class="w3-input w3-border" style="resize:none"></textarea>
+                        </p>
 
-                    <p><button type="button" class="w3-button w3-black w3-hover-blue  w3-round-large w3-right w3-margin-bottom" style="width:120px">Modificar</button></p>
-                </form>
+                        <p>
+                            <button type="button"
+                                    class="w3-button w3-black w3-hover-blue  w3-round-large w3-right w3-margin-bottom"
+                                    style="width:120px">Modificar
+                            </button>
+                        </p>
+                    </form>
 
+                </div>
             </div>
         </div>
-    </div>
 
-        <div class="newPokemon">
-            <button onclick=\"document.getElementById('id01').style.display='block'\" class="w3-button w3-black w3-hover-blue  w3-round-large w3-right w3-margin-bottom"> Capturar Nuevo Pokemon</button>
-        </div>
-</main>
 
-<footer>
-    <?php
-    include_once ("./src/footer.php");
-    ?>
-</footer>
+    </main>
+
+    <footer>
+        <?php
+        include_once("./src/footer.php");
+        ?>
+    </footer>
+
+    <script>
+        function confirmDelete(id_pokemon) {
+            // Mostrar el modal correspondiente
+            document.getElementById('modal-' + id_pokemon).style.display = 'block';
+
+            // Asignar la acción al botón de confirmación
+            document.getElementById('btnConfirmDelete-' + id_pokemon).onclick = function() {
+                window.location.href = 'eliminar_pokemon.php?id_pokemon=' + id_pokemon;
+            };
+        }
+    </script>
 </body>
 </html>
 
