@@ -54,3 +54,7 @@
 .newPokemon button{
     width: 100%;
 }
+
+.noEncontrado{
+    background: yellow;
+}

@@ -234,7 +234,7 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
                 </div>";
         }
     } else {
-        echo "<tr><td colspan='5'>No se encontraron Pokémon</td></tr>";
+        echo "<tr><td class='noEncontrado' colspan='5'>No se encontraron Pokémon</td></tr>";
     }
 }
 
@@ -292,7 +292,7 @@ function traerPokemonsFiltrados(mysqli $conn, $busqueda, string $path_tipos, $re
                 </div>";
         }
     } else {
-        echo "<tr><td colspan='5'>No se encontraron Pokémon con ese criterio de busqueda</td></tr>";
+        echo "<tr><td class='noEncontrado' colspan='5'>No se encontraron Pokémon con ese criterio de busqueda</td></tr>";
         echo traerTodosLosPokemons($resultado, $path_tipos);
     }
 }
