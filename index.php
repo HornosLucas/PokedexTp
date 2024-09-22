@@ -224,8 +224,11 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
                     </header>
                     <div class='w3-container'>
                         <form action='/pokedexTp/src/modificarPokemon.php' method='POST' enctype='multipart/form-data'>
-                            <input type='hidden' name='id_pokemon' value='" . $fila['id_pokemon'] . "'>
-                        
+                            <input type='hidden' name='id_pokemon_actual' value='" . $fila['id_pokemon'] . "'> <!-- Para saber cuál es el ID actual en la base de datos -->
+                            
+                            <label for='idPokemon'>ID del Pokémon</label>
+                            <input type='text' name='id_pokemon' value='" . $fila['id_pokemon'] . "' class='w3-input'>
+
                             <label for='nombrePokemon'>Nombre</label>
                             <input type='text' name='nombre' value='" . $fila['nombre'] . "' class='w3-input'>
                             
@@ -283,8 +286,7 @@ function traerPokemonsFiltrados(mysqli $conn, $busqueda, string $path_tipos, $re
 
             echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
 
-
-            echo "<button type='button' onclick=\"document.getElementById('id01').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
+            echo "<button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
 
             echo "</td>";
             echo "</tr>";
@@ -306,6 +308,44 @@ function traerPokemonsFiltrados(mysqli $conn, $busqueda, string $path_tipos, $re
                         </footer>
                     </div>
                 </div>";
+
+            echo "
+            <div id='modal-modificar-" . $fila['id_pokemon'] . "' class='w3-modal'>
+                <div class='w3-modal-content w3-animate-top'>
+                    <header class='w3-container w3-teal'>
+                        <span onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='none'\"
+                            class='w3-button w3-hover-red w3-display-topright'>&times;</span>
+                        <h2>Modificar Pokémon</h2>
+                    </header>
+                    <div class='w3-container'>
+                        <form action='/pokedexTp/src/modificarPokemon.php' method='POST' enctype='multipart/form-data'>
+                            <input type='hidden' name='id_pokemon_actual' value='" . $fila['id_pokemon'] . "'> <!-- Para saber cuál es el ID actual en la base de datos -->
+                            
+                            <label for='idPokemon'>ID del Pokémon</label>
+                            <input type='text' name='id_pokemon' value='" . $fila['id_pokemon'] . "' class='w3-input'>
+
+                            <label for='nombrePokemon'>Nombre</label>
+                            <input type='text' name='nombre' value='" . $fila['nombre'] . "' class='w3-input'>
+                            
+                            <label for='imagenNueva'>Imagen del Pokémon:</label>
+                            <input type='file' name='imagenNueva'><br><br>
+                            
+                            <label for='descripcionPokemon'>Descripción</label>
+                            <textarea name='descripcion' class='w3-input'>" . $fila['descripcion'] . "</textarea>
+                            
+                            <label for='tipoPokemon'>Tipo</label>
+                            <input type='text' name='tipo' value='" . $fila['tipo'] . "' class='w3-input'>
+                            
+                            <label for='tipo2Pokemon'>Tipo 2</label>
+                            <input type='text' name='tipo_2' value='" . $fila['tipo_2'] . "' class='w3-input'>
+                            <footer class='w3-container w3-green'>
+                                    <button type='submit' class='w3-button w3-blue'>Guardar Cambios</button>
+                                    <button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='none'\" class='w3-button w3-red'>Cancelar</button>
+                            </footer>
+                        </form>
+                    </div>
+                </div>
+            </div>";
         }
     } else {
         echo "<tr><td class='noEncontrado' colspan='5'>No se encontraron Pokémon con ese criterio de busqueda</td></tr>";
