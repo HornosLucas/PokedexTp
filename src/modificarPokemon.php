@@ -2,8 +2,8 @@
 include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id_pokemon_actual = $_POST['id_pokemon_actual']; // ID actual (antes de la modificación)
-    $id_pokemon_nuevo = $_POST['id_pokemon']; // ID nuevo (posiblemente modificado)
+    $id_pokemon_actual = $_POST['id_pokemon_actual'];
+    $id_pokemon_nuevo = $_POST['id_pokemon'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
     $tipo = $_POST['tipo'];
@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (move_uploaded_file($_FILES["imagenNueva"]["tmp_name"], $target_file)) {
                 $ruta_imagen = $ruta_absouluta . basename($_FILES["imagenNueva"]["name"]);
 
-                // Actualizar el Pokémon con imagen nueva
                 $sql = "UPDATE pokemon 
                         SET id_pokemon = ?, nombre = ?, descripcion = ?, tipo = ?, tipo_2 = ?, imagen = ?
                         WHERE id_pokemon = ?";
@@ -52,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "El archivo no es una imagen.";
         }
     } else {
-        // Actualizar el Pokémon sin imagen nueva
         $sql = "UPDATE pokemon 
                 SET id_pokemon = ?, nombre = ?, descripcion = ?, tipo = ?, tipo_2 = ?
                 WHERE id_pokemon = ?";
@@ -103,37 +101,3 @@ function validarTipos($tipo, $tipo_2) {
 
     return true;
 }
-
-?>
-
-
-function normalizarTipo($tipo) {
-    return preg_replace('/[^a-z]/', '', strtolower($tipo));
-}
-
-function validarTipos($tipo, $tipo_2) {
-    $tipos_validos = [
-        'normal', 'fuego', 'agua', 'electrico', 'planta', 'hielo', 'lucha', 'veneno',
-        'tierra', 'volador', 'psiquico', 'bicho', 'roca', 'fantasma', 'dragon',
-        'siniestro', 'acero', 'hada'
-    ];
-
-    $tipo_normalizado = normalizarTipo($tipo);
-    $tipo_2_normalizado = normalizarTipo($tipo_2);
-
-    if (!in_array($tipo_normalizado, $tipos_validos)) {
-        return false;
-    }
-
-    if (!empty($tipo_2) && !in_array($tipo_2_normalizado, $tipos_validos)) {
-        return false;
-    }
-
-    if (!empty($tipo_2) && $tipo_normalizado === $tipo_2_normalizado) {
-        return false;
-    }
-
-    return true;
-}
-
-?>
