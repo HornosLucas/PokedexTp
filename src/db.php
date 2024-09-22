@@ -10,10 +10,8 @@ $servername = $config['servername'];
 $username = $config['username'];
 $password = "";
 $dbname = $config['dbname'];
-$port = 3307;
 
-
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
