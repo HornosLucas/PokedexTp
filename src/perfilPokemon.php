@@ -42,7 +42,7 @@ if ($resultado->num_rows > 0) {
         <div class="imagenPokemon w3-col s4  w3-center">
 
             <div class="w3-card-4">
-                <img src=<?php echo $pokemonImagen ?> alt="Person">
+                <img class="pokemonImagen" src=<?php echo $pokemonImagen ?> alt="Person">
             </div>
         </div>
 
@@ -51,10 +51,10 @@ if ($resultado->num_rows > 0) {
         <div class="descripcionPokemon w3-col s8  w3-center">
 
             <?php
-             echo "<img src='" . $path_tipos . $pokemonTipo. ".png" . "' class='w3-circle' alt='Tipo de Pokemon'>";
+             echo "<img src='" . $path_tipos . $pokemonTipo. ".png" . "' class='w3-circle tipoImagen' alt='Tipo de Pokemon'>";
 
             if (!empty($pokemonTipo2)) {
-                echo "<img src='" . $path_tipos . $pokemonTipo2 . ".png" . "' class='w3-circle' alt='Tipo Secundario de Pokemon'></td>";
+                echo "<img  src='" . $path_tipos . $pokemonTipo2 . ".png" . "' class='w3-circle tipoImagen' alt='Tipo Secundario de Pokemon'></td>";
 
 
             }

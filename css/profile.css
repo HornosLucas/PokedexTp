@@ -7,10 +7,16 @@
     height: 40em;
 }
 
-img{
+.pokemonImagen{
     max-width: 10em;
     min-width: 10em;
 }
+.tipoImagen{
+    max-width: 10em;
+    min-width: 10em;
+}
+
+
 
 .tipo {
     display: inline-block;

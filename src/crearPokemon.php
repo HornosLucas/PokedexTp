@@ -36,3 +36,5 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
 ?>
 
 
+
+
