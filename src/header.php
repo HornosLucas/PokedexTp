@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$username = isset($_POST['username']) ? $_POST['username'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
+
+if ($username == "admin" && $password == "123") {
+    $_SESSION['logeo'] = 1;
+} else {
+    $_SESSION['logeo'] = 0;
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,17 +24,17 @@
     <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="logo">  </div>
     <div class="w3-col   w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
     <div class="w3-col   w3-center formConteiner conteiner">
-        <form class="form">
-            <input type="text" class="username" placeholder="username">
-            <input type="text" class="password" placeholder="password">
+        <?php if ($_SESSION['logeo'] != 1): ?>
+        <form class="form" method="post" action="">
+            <input type="text" name="username" class="username" placeholder="username">
+            <input type="text" name="password" class="password" placeholder="password">
             <button class="w3-button w3-black  w3-round-large w3-round-large">Ingresar</button>
         </form>
+        <?php else: ?>
+        <p> HOLA <?php echo htmlspecialchars($username); ?></p>
+
+        <?php endif; ?>
     </div>
 </div>
 </body>
 </html>
-
-
-
-
-<?php
