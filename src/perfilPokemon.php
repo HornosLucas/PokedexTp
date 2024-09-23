@@ -1,3 +1,24 @@
+<?php
+
+$idPokemonElegido = $_GET["id"];
+include_once("db.php");
+$query_pokemon = "SELECT * FROM pokemon WHERE id = $idPokemonElegido";
+$resultado = $conn->query($query_pokemon);
+$path_tipos = '/PokedexTp/img/tipos/';
+
+if ($resultado->num_rows > 0) {
+    while ($fila = $resultado->fetch_assoc()) {
+        $pokemonNombre = $fila["nombre"];
+        $pokemonDescripcion = $fila["descripcion"];
+        $pokemonTipo = $fila["tipo"];
+        $pokemonTipo2 = $fila["tipo_2"];
+        $pokemonImagen = $fila["imagen"];
+        $pokemonId= $fila["id_pokemon"];
+
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +33,7 @@
 <body>
 <header>
     <?php
-    include_once("../src/header.php");
+    include_once("header.php");
 
     ?>
 </header>
@@ -22,16 +43,29 @@
         <div class="imagenPokemon w3-col s4  w3-center">
 
             <div class="w3-card-4">
-                <img src="../img/pokemon/Squirtle.png" alt="Person">
+                <img class="pokemonImagen" src=<?php echo $pokemonImagen ?> alt="Person">
             </div>
         </div>
 
+
+
         <div class="descripcionPokemon w3-col s8  w3-center">
-              <img class="tipo" src="../img/tipos/agua.png" alt="Tipo">
-            <div class="nombreTipo"><p>Yo Squirtle</p></div>
+
+            <?php
+             echo "<img src='" . $path_tipos . $pokemonTipo. ".png" . "' class='w3-circle tipoImagen' alt='Tipo de Pokemon'>";
+
+            if (!empty($pokemonTipo2)) {
+                echo "<img  src='" . $path_tipos . $pokemonTipo2 . ".png" . "' class='w3-circle tipoImagen' alt='Tipo Secundario de Pokemon'></td>";
+
+
+            }
+            ?>
+
+
+            <div class="nombreTipo"><p><?php echo $pokemonNombre ?></p></div>
 
            <div class="descripcion">
-               <p>Squirtle es una de las especies más difíciles de encontrar. Habita tanto aguas dulces como marinas, preferiblemente zonas bastante profundas. Son pequeñas tortugas color celeste con caparazones color café; o rojas en algunos casos, con una cola enrollada que los distingue. Poco después de nacer, sus caparazones se endurecen y se hacen más resistentes a los ataques; muchos objetos rebotarán en ella.</p>
+               <p> <?php echo $pokemonDescripcion?></p>
            </div>
         </div>
     </div>
@@ -44,7 +78,4 @@
 </footer>
 </body>
 </html>
-
-<?php
-
 

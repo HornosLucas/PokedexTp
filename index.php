@@ -13,7 +13,7 @@
 
     <header>
         <?php
-        include_once("./src/header.php");
+        include_once("src/header.php");
         include_once("src/db.php");
         $query_pokemon = "SELECT * FROM pokemon";
         $resultado = $conn->query($query_pokemon);
@@ -203,7 +203,8 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
                 echo "</td>";
             }
             echo "<td>" . $fila['id_pokemon'] . "</td>";
-            echo "<td>" . $fila['nombre'] . "</td>";
+            echo "<td><a href='src/perfilPokemon.php?id=" . $fila['id'] . "'>" . $fila['nombre'] . "</a></td>";
+
 
             echo "<td>";
 

@@ -11,17 +11,20 @@ if ($username == "admin" && $password == "123") {
 }
 ?>
 <!doctype html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
 </head>
 <body>
 <div class="w3-bar header w3-row">
-    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="logo">  </div>
+    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="">  </div>
+    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="../img/logo.png" alt="">  </div>
     <div class="w3-col   w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
     <div class="w3-col   w3-center formConteiner conteiner">
         <?php if ($_SESSION['logeo'] != 1): ?>
