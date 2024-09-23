@@ -1,7 +1,8 @@
 <?php
-$id=isset($_GET["id"])?$_GET["id"]:"";
+
+$idPokemonElegido = $_GET["id"];
 include_once("db.php");
-$query_pokemon = "SELECT * FROM pokemon WHERE id_pokemon = $id";
+$query_pokemon = "SELECT * FROM pokemon WHERE id = $idPokemonElegido";
 $resultado = $conn->query($query_pokemon);
 $path_tipos = '/PokedexTp/img/tipos/';
 
