@@ -1,4 +1,5 @@
 <?php
+session_start();
     include_once("db.php");
 if (isset($_GET['id_pokemon'])) {
     $id_pokemon = $_GET['id_pokemon'];

@@ -1,5 +1,7 @@
 <?php
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 $config = parse_ini_file('bd.ini', true);
 
 if (!$config) {

@@ -1,13 +1,6 @@
 <?php
-session_start();
-
-$username = isset($_POST['username']) ? $_POST['username'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
-
-if ($username == "admin" && $password == "123") {
-    $_SESSION['logeo'] = 1;
-} else {
-    $_SESSION['logeo'] = 0;
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
 }
 ?>
 <!doctype html>
@@ -27,16 +20,29 @@ if ($username == "admin" && $password == "123") {
     <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="../img/logo.png" alt="">  </div>
     <div class="w3-col   w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
     <div class="w3-col   w3-center formConteiner conteiner">
-        <?php if ($_SESSION['logeo'] != 1): ?>
-        <form class="form" method="post" action="">
-            <input type="text" name="username" class="username" placeholder="username">
-            <input type="text" name="password" class="password" placeholder="password">
-            <button class="w3-button w3-black  w3-round-large w3-round-large">Ingresar</button>
-        </form>
-        <?php else: ?>
-        <p> HOLA <?php echo htmlspecialchars($username); ?></p>
+        <?php
 
-        <?php endif; ?>
+        if (!isset($_SESSION['logeo'])) {
+
+            // Mostrar el formulario de login si no se ha iniciado sesión
+            echo "<form class='form' method='post' action='src/validar.php'>";
+            echo "<input type='text' name='username' class='username' placeholder='username'>";
+            echo "<input type='password' name='password' class='password' placeholder='password'>";
+            echo "<button class='w3-button w3-black  w3-round-large w3-round-large'>Ingresar</button>";
+            echo "</form>";
+
+        } else {
+
+            // Verificar si el usuario tiene el valor de logeo igual a 1
+            if ($_SESSION['logeo'] == 1) {
+                echo " <p> HOLA admin</p>";
+                echo "<a href='src/logout.php'>Cerrar sesion</a>";
+            } else {
+                echo " <p> HOLA usuario</p>";
+                echo "<a href='src/logout.php'>Cerrar sesion</a>";
+            }
+        }
+        ?>
     </div>
 </div>
 </body>
