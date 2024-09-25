@@ -9,15 +9,13 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="/PokedexTp/css/header.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
 </head>
 <body>
 <div class="w3-bar header w3-row">
-    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="img/logo.png" alt="">  </div>
-    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="../img/logo.png" alt="">  </div>
+    <div class="w3-col   w3-center logoConteiner conteiner"> <img class="logo" src="/PokedexTp/img/logo.png" alt="">  </div>
     <div class="w3-col   w3-center titleConteiner conteiner"> <h3>POKEDEX</h3> </div>
     <div class="w3-col   w3-center formConteiner conteiner">
         <?php
@@ -35,11 +33,11 @@ if (session_status() == PHP_SESSION_NONE) {
 
             // Verificar si el usuario tiene el valor de logeo igual a 1
             if ($_SESSION['logeo'] == 1) {
-                echo " <p> HOLA admin</p>";
-                echo "<a href='src/logout.php'>Cerrar sesion</a>";
+                echo " <p> Hola admin</p>";
+                echo "<a href='http://localhost/PokedexTp/src/logout.php'>Cerrar sesion</a>";
             } else {
-                echo " <p> HOLA usuario</p>";
-                echo "<a href='src/logout.php'>Cerrar sesion</a>";
+                echo " <p> Hola usuario</p>";
+                echo "<a href='http://localhost/PokedexTp/src/logout.php'>Cerrar sesion</a>";
             }
         }
         ?>
