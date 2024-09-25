@@ -36,6 +36,11 @@
     display: block;
     outline: 0;
 
+
+}
+
+.buscar::before{
+    content:"¿Quien es este pokemon?";
 }
 
 .pokemonList td{
@@ -57,4 +62,37 @@
 
 .noEncontrado{
     background: yellow;
+}
+
+.w3-table-all tr:nth-child(even) {
+    background-color: #2DA64F !important;
+    color: white;
+}
+
+.w3-table-all tr:nth-child(odd) {
+    background-color: #356643 !important;
+    color: white;
+}
+
+table .w3-circle{
+border: 2px solid white;
+}
+
+.w3-bordered tr, .w3-table-all tr {
+    border-bottom: 0px solid #ddd !important;
+}
+
+.w3-table-all {
+    border: 1px solid #513131 !important;
+}
+
+@media (max-width: 768px) {
+.buscar::before{
+    content: "Buscar";
+}
+
+}
+
+@media (max-width: 480px) {
+
 }

@@ -27,11 +27,11 @@
         <div>
             <form class="searchForm" action="index.php" method="get">
                 <input type="text" class="" name="busqueda" placeholder="Buscar..">
-                <button type="submit" class="w3-button w3-black w3-round-large">¿Quién es este pokemon?</button>
+                <button type="submit" class="w3-button w3-black w3-hover-blue w3-round-large buscar"></button>
             </form>
         </div>
 
-        <table class="w3-table-all w3-card-4 pokemonList">
+        <table class="messi w3-table-all w3-card-4 pokemonList">
             <tr>
                 <th>Imagen</th>
                 <th>Tipo</th>
@@ -65,7 +65,7 @@
                 </header>
 
                 <div class="">
-                    <form class="w3-container w3-card-4" action=""> <!--- MODIFICAR ACTION Y PONER PHP --->
+                    <form class="w3-container w3-card-4" action="">
                         <br>
                         <p>
                             <label class="w3-text-grey">Nombre</label>
@@ -106,7 +106,7 @@
                 </header>
 
                 <div class="">
-                    <form class="w3-container w3-card-4" enctype="multipart/form-data" action="src/crearPokemon.php" method="post"> <!--- MODIFICAR ACTION Y PONER PHP --->
+                    <form class="w3-container w3-card-4" enctype="multipart/form-data" action="src/crearPokemon.php" method="post">
                         <br>
                         <p>
                             <label class="w3-text-grey">Imagen</label>

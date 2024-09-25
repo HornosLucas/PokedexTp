@@ -1,3 +1,12 @@
-.footer{
-    background-color: #4FB36B;
+.inferior{
+    background-color: #2DA64F !important;
+}
+
+.superior{
+
+    background-color: #356643 !important;
+}
+
+li{
+    border: 1px solid #356643 !important;
 }

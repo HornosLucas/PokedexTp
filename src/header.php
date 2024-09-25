@@ -24,9 +24,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
             // Mostrar el formulario de login si no se ha iniciado sesión
             echo "<form class='form' method='post' action='src/validar.php'>";
-            echo "<input type='text' name='username' class='username' placeholder='username'>";
-            echo "<input type='password' name='password' class='password' placeholder='password'>";
-            echo "<button class='w3-button w3-black  w3-round-large w3-round-large'>Ingresar</button>";
+            echo "<input type='text' name='username' class='username' placeholder='Nombre de Usuario'>";
+            echo "<input type='password' name='password' class='password' placeholder='Contraseña'>";
+            echo "<button class='w3-button w3-black w3-hover-blue  w3-round-large w3-round-large'>Ingresar</button>";
             echo "</form>";
 
         } else {
