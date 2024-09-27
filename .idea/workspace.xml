@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53fdee4a-8c4b-4155-a46c-9c455cc455c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PokedexTp/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pokemon/403749497_1299682653932865_4326985768403355869_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profile.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "santi",
+    "git-widget-placeholder": "Nico",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +67,7 @@
       <workItem from="1726665286169" duration="5199000" />
       <workItem from="1726754241102" duration="781000" />
       <workItem from="1726769540632" duration="171000" />
+      <workItem from="1727393882548" duration="4276000" />
     </task>
     <servers />
   </component>
