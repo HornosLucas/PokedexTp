@@ -10,10 +10,11 @@
     <title>Pokedex</title>
 </head>
 <body>
-<header>
+
     <header>
         <?php
-        include_once("./src/header.php");
+        session_start();
+        include_once("src/header.php");
         include_once("src/db.php");
         $query_pokemon = "SELECT * FROM pokemon";
         $resultado = $conn->query($query_pokemon);
@@ -26,17 +27,20 @@
         <div>
             <form class="searchForm" action="index.php" method="get">
                 <input type="text" class="" name="busqueda" placeholder="Buscar..">
-                <button type="submit" class="w3-button w3-black w3-round-large">¿Quién es este pokemon?</button>
+                <button type="submit" class="w3-button w3-black w3-hover-blue w3-round-large buscar"></button>
             </form>
         </div>
 
-        <table class="w3-table-all w3-card-4 pokemonList">
+        <table class="messi w3-table-all w3-card-4 pokemonList">
             <tr>
                 <th>Imagen</th>
                 <th>Tipo</th>
                 <th>Número</th>
                 <th>Nombre</th>
+                <?php if (isset($_SESSION['logeo'])): ?>
                 <th>Acciones</th>
+                <?php else: ?>
+                <?php endif; ?>
             </tr>
 
             <?php
@@ -61,7 +65,7 @@
                 </header>
 
                 <div class="">
-                    <form class="w3-container w3-card-4" action=""> <!--- MODIFICAR ACTION Y PONER PHP --->
+                    <form class="w3-container w3-card-4" action="">
                         <br>
                         <p>
                             <label class="w3-text-grey">Nombre</label>
@@ -102,7 +106,7 @@
                 </header>
 
                 <div class="">
-                    <form class="w3-container w3-card-4" enctype="multipart/form-data" action="src/crearPokemon.php" method="post"> <!--- MODIFICAR ACTION Y PONER PHP --->
+                    <form class="w3-container w3-card-4" enctype="multipart/form-data" action="src/crearPokemon.php" method="post">
                         <br>
                         <p>
                             <label class="w3-text-grey">Imagen</label>
@@ -203,15 +207,16 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
                 echo "</td>";
             }
             echo "<td>" . $fila['id_pokemon'] . "</td>";
-            echo "<td>" . $fila['nombre'] . "</td>";
+            echo "<td><a href='src/perfilPokemon.php?id=" . $fila['id'] . "'>" . $fila['nombre'] . "</a></td>";
 
-            echo "<td>";
+            if (isset($_SESSION['logeo'])){
+                echo "<td>";
 
-            echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
+                echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
 
-            echo "<button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
-
-            echo "</td>";
+                echo "<button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
+                echo "</td>";
+            }
             echo "</tr>";
 
             echo "<div id='modal-" . $fila['id_pokemon'] . "' class='w3-modal'>
@@ -230,6 +235,7 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
                         </footer>
                     </div>
                 </div>";
+
 
             echo "
             <div id='modal-modificar-" . $fila['id_pokemon'] . "' class='w3-modal'>
@@ -299,15 +305,15 @@ function traerPokemonsFiltrados(mysqli $conn, $busqueda, string $path_tipos, $re
             echo "<td>" . $fila['id_pokemon'] . "</td>";
             echo "<td>" . $fila['nombre'] . "</td>";
 
-            echo "<td>";
+            if (isset($_SESSION['logeo'])){
+                echo "<td>";
 
-            echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
+                echo "<button type='button' class='w3-button w3-black w3-hover-red w3-round-large' onclick=\"confirmDelete('" . $fila['id_pokemon'] . "')\">Eliminar</button>";
 
-            echo "<button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
-
-            echo "</td>";
+                echo "<button type='button' onclick=\"document.getElementById('modal-modificar-" . $fila['id_pokemon'] . "').style.display='block'\" class='w3-button w3-black w3-hover-blue w3-round-large'>Modificar</button>";
+                echo "</td>";
+            }
             echo "</tr>";
-
 
             echo "<div id='modal-" . $fila['id_pokemon'] . "' class='w3-modal'>
                     <div class='w3-modal-content w3-animate-top'>
