@@ -214,6 +214,23 @@ function traerTodosLosPokemons($resultado, string $path_tipos)
             echo "</td>";
             echo "</tr>";
 
+            echo "<div id='modal-" . $fila['id_pokemon'] . "' class='w3-modal'>
+                    <div class='w3-modal-content w3-animate-top'>
+                        <header class='w3-container w3-teal'>
+                            <span onclick=\"document.getElementById('modal-" . $fila['id_pokemon'] . "').style.display='none'\"
+                                   class='w3-button w3-hover-red w3-display-topright'>&times;</span>
+                            <h2>Eliminar Pokémon</h2>
+                        </header>
+                        <div class='w3-container'>
+                            <p>¿Estás seguro de que deseas eliminar a " . $fila['nombre'] . "?</p>
+                        </div>
+                        <footer class='w3-container w3-red'>
+                            <button id='btnConfirmDelete-" . $fila['id_pokemon'] . "' class='w3-button w3-green w3-right'>Sí</button>
+                            <button onclick=\"document.getElementById('modal-" . $fila['id_pokemon'] . "').style.display='none'\" class='w3-button w3-red w3-right'>No</button>
+                        </footer>
+                    </div>
+                </div>";
+
             echo "
             <div id='modal-modificar-" . $fila['id_pokemon'] . "' class='w3-modal'>
                 <div class='w3-modal-content w3-animate-top'>
