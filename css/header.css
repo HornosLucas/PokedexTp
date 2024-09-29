@@ -33,3 +33,16 @@
 .header{
     background-color: #356643 !important;
 }
+
+@media (max-width: 768px) {
+
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+}

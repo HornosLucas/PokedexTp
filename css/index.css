@@ -14,7 +14,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 3em;
+    margin-bottom: 3em;
     width: 100%;
 }
 
@@ -41,6 +41,17 @@
 
 .buscar::before{
     content:"¿Quien es este pokemon?";
+}
+
+.numero::before{
+    content: "Número";
+}
+
+table td {
+    text-align: center !important;
+}
+table th {
+    text-align: center !important;
 }
 
 .pokemonList td{
@@ -90,9 +101,41 @@ border: 2px solid white;
 .buscar::before{
     content: "Buscar";
 }
+    .pokemonList img {
+        max-width: 4em;
+        min-width: 4em;
+    }
+
+    table td {
+        padding: 5px 5px !important;
+    }
+    table th {
+        padding: 5px 0px !important;
+    }
+    .numero::before{
+        content: "Num";
+    }
 
 }
 
 @media (max-width: 480px) {
+    .pokemonList img {
+        max-width: 4em;
+        min-width: 4em;
+    }
+
+    .w3-btn, .w3-button {
+        border: none;
+        display: inline-block;
+        padding: 0px 4px !important;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+    }
 
 }

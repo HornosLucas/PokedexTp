@@ -35,7 +35,7 @@
             <tr>
                 <th>Imagen</th>
                 <th>Tipo</th>
-                <th>Número</th>
+                <th class="numero"></th>
                 <th>Nombre</th>
                 <?php if (isset($_SESSION['logeo'])): ?>
                 <th>Acciones</th>
